@@ -1,0 +1,1 @@
+let modal = getElementById('modal');
