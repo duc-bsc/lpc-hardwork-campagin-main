@@ -459,3 +459,7 @@ footer {
 .max-width-product {
   max-width: 300px;
 }
+
+.flickity-button-icon {
+  fill: #c42330;
+}
