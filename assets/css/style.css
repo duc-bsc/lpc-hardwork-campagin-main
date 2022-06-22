@@ -429,15 +429,21 @@ article {
   background: white;
 }
 .product {
-  width: 30%;
+  width: calc(100% / 4);
   text-align: center;
   margin: 1rem;
   color: white;
 }
 /*sx<=567px,sm <= 768px,md <= 992px,lg <= 1200px,xl <= 1600px*/
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 1200px) {
   .product {
-    width: 80%;
+    width: calc(100% / 3);
+  }
+}
+@media screen and (max-width: 992px) {
+  .product {
+    width: calc(100% / 2);
   }
 }
 @media screen and (max-width: 576px) {
@@ -479,4 +485,15 @@ footer {
 .flickity-slider {
   display: flex;
   align-items: flex-end;
+}
+
+.d-block {
+  display: block;
+}
+
+.product > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border-right: 1px solid white; */
 }
