@@ -354,21 +354,22 @@ article {
 /*== == == == ==>modal<== == == == == */
 .modal {
   position: fixed;
-  top: -120%;
+
+  bottom: 100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
   z-index: 99999;
-  display: block;
-
+  /* display: none; */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.5s ease-in-out;
+  transition: background-color 200ms ease-in-out, bottom 200ms 200ms ease-in-out;
 }
 .is-modal-open {
-  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0%;
+  transition: bottom 250ms ease-in-out, background-color 250ms 250ms ease-in-out;
 }
 .modal .modal-content {
   width: 1700px;
@@ -404,6 +405,9 @@ article {
 .slider .dot {
   background: white;
 }
+.js-flickity {
+  min-height: 600px;
+}
 
 .product {
   text-align: center;
@@ -411,12 +415,11 @@ article {
   display: block;
   flex: 1;
   width: calc(25% - 1px);
-  /* max-width: 350px; */
+  min-height: 600px;
   padding-right: 50px;
   padding-left: 50px;
   border-right: solid 1px white;
   /* border-left: solid 1px white; */
-  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
