@@ -147,36 +147,31 @@ for (let modalOpen of modalOpens) {
   modalOpen.onclick = function () {
     modal.classList.add("is-modal-open")
 
-    // console.log(elem)
-    // console.log(modals[modalName].map(createProduct).join(""))
-    // modal.querySelector(".js-flickity").innerHTML = modals[modalName].map(createProduct).join("")
-
     const elem = modal.querySelector(".js-flickity")
-    flkty = new Flickity(elem, {
-      // options
-      cellAlign: "left",
-      wrapAround: true,
-      adaptiveHeight: true,
-    })
 
-    flkty.append(
-      modals[modalName].map((props) => {
-        const div = document.createElement("div")
-        div.classList = "product"
-        div.innerHTML = `<div>
-        <img class="mx-auto d-block" src="${props.imgSrc}" alt="${props.productTitle}" />
-        <figure class="mx-auto mb-2 d-block">
-          <a title="${props.productTitle}" href="${props.productPageUrl}">
-            <img src="${props.logoSrc}" alt="${props.productTitle}" />
-          </a>
-          ${props.logoCaption ? `<figcaption>${props.logoCaption}</figcaption>` : ""}
-        </figure>
-        <p class="mx-auto mb-2 max-w-250">${props.desc}</p>
+    const eleHTML = modals[modalName]
+      .map((props) => {
+        const div = `
+      <div class="product">
+        <div>
+          <img class="mx-auto d-block" src="${props.imgSrc}" alt="${props.productTitle}" />
+          <figure class="mx-auto mb-2 d-block">
+            <a title="${props.productTitle}" href="${props.productPageUrl}">
+              <img src="${props.logoSrc}" alt="${props.productTitle}" />
+            </a>
+            ${props.logoCaption ? `<figcaption>${props.logoCaption}</figcaption>` : ""}
+          </figure>
+          <p class=" mb-2 ">${props.desc}</p>
+        </div>
+        <a class="button" target="_blank" href="${props.productPageUrl}">${props.productTitle} <i class="fas fa-chevron-circle-right"></i> 
+        </a> 
       </div>
-      <a class="button" target="_blank" href="${props.productPageUrl}">${props.productTitle} <i class="fas fa-chevron-circle-right"></i> </a>`
+      `
         return div
       })
-    )
+      .join("")
+
+    elem.innerHTML = eleHTML
   }
 
   let modalClose = modal.querySelector(".modal-close")
