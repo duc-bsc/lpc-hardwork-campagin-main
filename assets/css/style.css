@@ -26,7 +26,7 @@ html {
 
 article p {
   color: white;
-  text-shadow: 0 0 8px black;
+  /* text-shadow: 0 0 8px black; */
 }
 
 article p:nth-child(2) {
@@ -118,7 +118,7 @@ body {
 }
 
 article.section-block p strong {
-  text-shadow: 0 0 8px black;
+  /* text-shadow: 0 0 8px black; */
   line-height: 0.85em;
   text-align: right;
   text-transform: uppercase;
@@ -185,10 +185,11 @@ footer article p strong {
 #standards-redefined {
   padding-right: 25vw;
 }
-
-#harvestsmart-man {
-  left: 3vw;
-  max-width: 40vw;
+@screen and (min-width: 769px) {
+  #harvestsmart-man {
+    left: 3vw;
+    max-width: 40vw;
+  }
 }
 
 #harvestsmart-text {
@@ -226,83 +227,8 @@ article.section-block {
   filter: drop-shadow(2px 4px 6px black);
 }
 
-@media screen and (max-width: 999.98px) {
-  article.container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    grid-gap: 0px;
-  }
-
-  section.position-relative {
-    /* min-height: 80vw !important; */
-  }
-
-  section.position-relative > img {
-    /* min-height: 80vw !important; */
-  }
-
-  article.section-block p strong {
-    text-align: left;
-    font-size: 3rem;
-  }
-  /* article p:nth-child(2) {
-    max-width: 60vw;
-  } */
-  article.section-block p:last-child {
-    margin-bottom: 10vw;
-  }
-
-  article p strong br {
-  }
-  #standards-redefined {
-    padding-top: 10vw;
-  }
-}
-@media screen and (max-width: 599.98px) {
-  #harvestsmart-text {
-    padding-left: 0;
-    padding-top: 0;
-  }
-
-  #harvestsmart-man {
-    left: auto;
-    right: 0;
-  }
-  .d-sm-none {
-    display: none !important;
-  }
-  .article p:nth-child(2) {
-    width: 90vw !important;
-  }
-  #plantstrong-text {
-    padding: 0;
-  }
-
-  #standards-redefined {
-    padding-right: 0;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .position-md-relative {
-    position: relative;
-  }
-
-  .position-md-absolute {
-    position: absolute;
-  }
-}
-
-@media screen and (max-width: 999.98px) {
-  .position-sm-relative {
-    position: relative;
-  }
-
-  .position-sm-absolute {
-    position: absolute;
-  }
+#standards-redefined-section .w-50vw {
+  width: 50vw;
 }
 /* 
 
@@ -360,23 +286,6 @@ article.section-block {
   padding: 1rem;
 }
 
-/*sx<=567px,sm <= 768px,md <= 992px,lg <= 1200px,xl <= 1600px*/
-@media screen and (max-width: 992px) {
-  .footer .row {
-    /* flex-direction: column; */
-  }
-  .footer .row > .col-left {
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .footer .row-products {
-    /* flex-direction: column; */
-  }
-  .footer .row-products .col {
-    width: 100%;
-  }
-}
 /*== == == == ==>modal<== == == == == */
 .modal {
   position: fixed;
@@ -444,18 +353,31 @@ article.section-block {
   gap: 50px 25px;
 }
 
+.footer::-webkit-scrollbar,
 .slider::-webkit-scrollbar {
   width: 1em;
 }
 
+.footer::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.83);
+}
 .slider::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  /* background: white; */
 }
 
+.footer::-webkit-scrollbar-thumb,
 .slider::-webkit-scrollbar-thumb {
-  background-color: white;
   border-radius: 999px;
   outline: 1px solid slategrey;
+}
+
+.footer::-webkit-scrollbar-thumb {
+  background-color: #c42330;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: white;
 }
 
 .product {
@@ -575,4 +497,155 @@ footer {
   overflow: hidden;
   height: 100%;
   background: linear-gradient(0deg, transparent, white, transparent);
+}
+
+#plantstrong-section {
+  min-width: 100vw;
+  min-height: calc(100vw / 1920 * 918);
+  background: linear-gradient(to bottom, transparent, black), url("/images/plantstrong-bg.png") top left / auto 100%;
+}
+
+#harvestsmart-section {
+  min-width: 100vw;
+  min-height: calc(100vw / 1920 * 923);
+  background: linear-gradient(to bottom, transparent, black), url("/images/harvestsmart-bg.png") top right / auto 100%;
+}
+
+#standards-redefined-section {
+  min-width: 100vw;
+  min-height: calc(100vw / 1920 * 787);
+  background: linear-gradient(to bottom, transparent, #00000094), url("/images/standardsredefined-bg.png") top left / auto 100%;
+}
+
+@media screen and (max-width: 999.98px) {
+  article.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-gap: 0px;
+    padding: 4rem 1rem;
+  }
+
+  section.position-relative {
+    /* min-height: 80vw !important; */
+  }
+
+  section.position-relative > img {
+    /* min-height: 80vw !important; */
+  }
+
+  article.section-block p strong {
+    text-align: left;
+    font-size: 3rem;
+  }
+  /* article p:nth-child(2) {
+    max-width: 60vw;
+  } */
+  article.section-block p:last-child {
+    margin-bottom: 10vw;
+  }
+
+  article p strong br {
+  }
+  #standards-redefined {
+    padding-top: 10vw;
+  }
+
+  #standards-redefined-section .w-50vw {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .position-md-relative {
+    position: relative;
+  }
+
+  .position-md-absolute {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 999.98px) {
+  .position-sm-relative {
+    position: relative;
+  }
+
+  .position-sm-absolute {
+    position: absolute;
+  }
+
+  #harvestsmart-text {
+    padding-left: 45vw;
+  }
+}
+
+/*sx<=567px,sm <= 768px,md <= 992px,lg <= 1200px,xl <= 1600px*/
+@media screen and (max-width: 992px) {
+  .footer .row {
+    /* flex-direction: column; */
+  }
+  .footer .row > .col-left {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #harvestsmart-text {
+    padding-left: 0;
+  }
+
+  .footer .row-products {
+    /* flex-direction: column; */
+  }
+  .footer .row-products .col {
+    width: 100%;
+  }
+
+  .w-50vw {
+    width: 100vw;
+  }
+
+  .position-xs-relative {
+    position: relative;
+  }
+  #standards-redefined-section .w-50vw {
+    width: 100vw;
+  }
+
+  #plantstrong-section,
+  #harvestsmart-section,
+  #standards-redefined-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .order-xs-1 {
+    order: 1;
+  }
+
+  .d-sm-none {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 599.98px) {
+  #harvestsmart-text {
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  #harvestsmart-man {
+    left: auto;
+    right: 0;
+  }
+  .article p:nth-child(2) {
+    width: 90vw !important;
+  }
+  #plantstrong-text {
+    padding: 0;
+  }
+
+  #standards-redefined {
+    padding-right: 0;
+  }
 }
