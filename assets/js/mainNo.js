@@ -98,7 +98,7 @@ const modals = {
       imgSrc: "https://www.lundellplastics.com/images/01x101-1.png",
       productPageUrl: "https://www.lundellplastics.com/planting-products/closer-closing-wheels.asp",
       productTitle: "The Closer",
-      desc: 'The Closer closing wheels ensures adequate seed-to-soil contact while eliminating side wall compaction. Curved tooth design prevent lifting of the seed. Works in a wide variety of soil types and tillage practices. Non-stick poly design works great for in-between" nitrogen applications. Great for no-till and full tillage corn emergence.',
+      desc: 'The Closer closing wheels ensures adequate seed-to-soil contact while eliminating side wall compaction. Curved tooth design prevent lifting of the seed. Works in a wide variety of soil types and tillage practices. Non-stick poly design works great for in-between" nitrogen applications. Great for no-till and full tillage corn emergence.\nExcellent for notilling soybeans in to corn stalks soybeans emerge much quicker.',
     },
   ],
   "modal-2": [
