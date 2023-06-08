@@ -271,17 +271,23 @@ article.section-block {
 .footer .row {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   /* margin-bottom: 2rem; */
   max-width: 1200px;
-  min-width: 1000px;
+  /* min-width: 1000px; */
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  overflow: auto;
 }
 
 /*== == == == ==>col left<== == == == == */
 .footer .row > .col-left {
   flex: 1;
+}
+
+.footer .row > .col-left article {
+  min-width: 400px;
 }
 
 .footer .col-left .container {
@@ -386,28 +392,32 @@ article.section-block {
   gap: 50px 25px;
   background: #c42330;
 }
-
+.scollbar::-webkit-scrollbar,
 .footer::-webkit-scrollbar,
 .slider::-webkit-scrollbar {
   width: 1em;
 }
 
+.scollbar::-webkit-scrollbar-track,
 .footer::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   background: rgba(255, 255, 255, 0.83);
 }
 
+.scollbar::-webkit-scrollbar-track,
 .slider::-webkit-scrollbar-track {
   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   /* background: white; */
 }
 
+.scollbar::-webkit-scrollbar-thumb,
 .footer::-webkit-scrollbar-thumb,
 .slider::-webkit-scrollbar-thumb {
   border-radius: 999px;
   outline: 1px solid slategrey;
 }
 
+.scollbar::-webkit-scrollbar-thumb,
 .footer::-webkit-scrollbar-thumb {
   background-color: #c42330;
 }
@@ -465,6 +475,10 @@ article.section-block {
   .product {
     width: 100%;
   }
+
+  .footer .row > .col-left article {
+    min-width: 310px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -502,6 +516,8 @@ footer {
 .max-width-product {
   display: flex;
   flex-direction: column;
+  min-width: 233px;
+  flex: 1;
 }
 
 .footer-main__left {
@@ -564,7 +580,7 @@ footer {
 
 @media screen and (max-width: 1100px) {
   .max-width-product {
-    max-width: 300px;
+    /* max-width: 300px; */
     flex: 1;
   }
 
@@ -617,19 +633,19 @@ footer {
 }
 
 #plantstrong-section {
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: calc(100vw / 1920 * 918);
   background: linear-gradient(to bottom, transparent, black), url("/images/plantstrong-bg.png") top left / auto 100%;
 }
 
 #harvestsmart-section {
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: calc(100vw / 1920 * 923);
   background: linear-gradient(to bottom, transparent, black), url("/images/harvestsmart-bg.png") top right / auto 100%;
 }
 
 #standards-redefined-section {
-  min-width: 100vw;
+  /* min-width: 100vw; */
   min-height: calc(100vw / 1920 * 787);
   background: linear-gradient(to bottom, transparent, #00000094), url("/images/standardsredefined-bg.png") top left / auto 100%;
 }
