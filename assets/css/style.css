@@ -27,6 +27,8 @@ html {
 
 article p {
   color: white;
+  z-index: 9999;
+  position: relative;
   /* text-shadow: 0 0 8px black; */
 }
 
