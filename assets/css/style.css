@@ -382,6 +382,7 @@ article.section-block {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 50px 25px;
+  background: #c42330;
 }
 
 .footer::-webkit-scrollbar,
@@ -416,6 +417,7 @@ article.section-block {
 .product {
   padding: 25px;
   transition: background 300ms;
+  background: #c42330;
 }
 
 .product:hover {
