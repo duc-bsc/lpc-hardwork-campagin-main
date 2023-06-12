@@ -380,7 +380,7 @@ for (let modalOpen of modalOpens) {
         ${props.imgSrc ? `  <img class="mx-auto d-block" src="${props.imgSrc}" alt="${props.productTitle}" />` : ""}
         
           <figure class="mx-auto mb-2 d-block">
-            <a title="${props.productTitle}" href="${props.productPageUrl}">
+            <a  target="_blank" title="${props.productTitle}" href="${props.productPageUrl}">
             ${props.logoSrc ? `<img src="${props.logoSrc}" alt="${props.productTitle}" />` : ""}
               
             </a>
