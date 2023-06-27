@@ -255,7 +255,7 @@ article.section-block {
 /*== == == == ==>footer<== == == == == */
 .footer {
   padding-top: 1rem;
-  padding-bottom: 1rem;
+  /* padding-bottom: 1rem; */
   background-image: url("../images/footer-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
