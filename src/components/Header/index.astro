@@ -1,0 +1,12 @@
+---
+import img from './top.jpg';
+import { Picture } from 'astro:assets';
+---
+<section class="">
+    <Picture src={img} 
+    formats={['avif', 'webp']} 
+    alt="images" loading="lazy"
+    widths={[450, 768,992, 1200]}
+    sizes={`(max-width: 450px) 450px, (max-width: 768px) 768px, (max-width: 992px) 992px, ${img.width}px`}
+    />
+</section>
