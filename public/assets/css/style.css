@@ -188,9 +188,7 @@ footer article p strong {
 @media screen and (max-width: 599.98px) {
 }
 
-#standards-redefined {
-  padding-right: 25vw;
-}
+
 
 
 
@@ -225,9 +223,6 @@ article.section-block {
   filter: drop-shadow(2px 4px 6px black);
 }
 
-#standards-redefined-section .w-50vw {
-  width: 50vw;
-}
 
 /* 
 
@@ -616,11 +611,7 @@ footer {
 
 
 
-#standards-redefined-section {
-  /* min-width: 100vw; */
-  min-height: calc(100vw / 1920 * 787);
-  background: linear-gradient(to bottom, transparent, #00000094), url("/images/standardsredefined-bg.png") top left / auto 100%;
-}
+
 /*sx<=567px,sm <= 767px,md <= 992px,lg <= 1200px,xl <= 1600px*/
 @media screen and (max-width: 1500px) {
   .footer-main__logo {
@@ -676,14 +667,6 @@ footer {
 
   article p strong br {
   }
-
-  #standards-redefined {
-    padding-top: 10vw;
-  }
-
-  #standards-redefined-section .w-50vw {
-    width: 60vw;
-  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -738,14 +721,6 @@ footer {
     position: relative;
   }
 
-  #standards-redefined-section .w-50vw {
-    width: 100vw;
-  }
-
-  #standards-redefined-section {
-    display: flex;
-    flex-direction: column;
-  }
 
   .order-xs-1 {
     order: 1;
@@ -760,9 +735,5 @@ footer {
 
   .article p:nth-child(2) {
     width: 90vw !important;
-  }
-
-  #standards-redefined {
-    padding-right: 0;
   }
 }

@@ -1,0 +1,79 @@
+---
+import imgMan from './man.png';
+import { Picture } from 'astro:assets';
+import bg from './bg.png';
+---
+<section class="position-relative mt-neg11vw" style="z-index: 5" id="standards-redefined-section">
+	<Picture src={bg} formats={['avif', 'webp']} alt="images" loading="lazy" widths={[480, 768, 992, 1200, 1500]} class="standards-redefined-bg" sizes={` (max-width: 480px) 480px,(max-width: 768px) 768px, (max-width: 992px) 992px,(max-width: 1200px) 1200px, 1500px`} />
+
+    <div class="bottom-0 right-0 w-50vw position-absolute position-xs-relative mt-neg8vw d-sm-none order-xs-1">
+        <Picture src={imgMan} formats={['avif', 'webp']} alt="images" loading="lazy" widths={[100, 400, 800]} class="h-auto d-block w-100" sizes={` (max-width: 768px) 100px, (max-width: 992px) 400px, 800px`} />
+    </div>
+
+    <section class="inset-0 position-md-absolute position-sm-relative" id="standards-redefined">
+        <article class="container section-block">
+            <p class="mb-0">
+                <strong>STANDARDS&nbsp;<br />REDEFINED.</strong>&nbsp;
+            </p>
+            <p class="mb-05 drop-shadow">Keep your entire operation moving smoothly with Lundell Plastics. We manufacture industrial products tough enough to handle the most demanding jobs. From our heavy-duty drag paddles and flighting to our ExoPlate™ Liners, we're changing industry expectations.</p>
+            <span></span>
+            <p class="m-0">
+                <a data-modal="modal-3" class="button modal-open">Redefine your standards <i class="fas fa-chevron-circle-right"></i></a>
+            </p>
+        </article>
+    </section>
+</section>
+<style>
+    #standards-redefined {
+  padding-right: 25vw;
+}
+.standards-redefined-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+#standards-redefined-section .w-50vw {
+  width: 50vw;
+}
+#standards-redefined-section {
+  /* min-width: 100vw; */
+  min-height: calc(100vw / 1920 * 787);
+  background: linear-gradient(to bottom, transparent, #00000094);
+  position: relative;
+}
+@media screen and (max-width: 999.98px) {
+  #standards-redefined {
+    padding-top: 10vw;
+  }
+
+  #standards-redefined-section .w-50vw {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 768px) {
+
+
+ #standards-redefined-section .w-50vw {
+   width: 100vw;
+ }
+
+ #standards-redefined-section {
+   display: flex;
+   flex-direction: column;
+ }
+
+ 
+}
+@media screen and (max-width: 599.98px) {
+
+
+#standards-redefined {
+  padding-right: 0;
+}
+}
+
+</style>
