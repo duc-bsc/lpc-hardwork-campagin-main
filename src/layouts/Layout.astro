@@ -1,5 +1,5 @@
 ---
-
+import Header from '../components/Header/index.astro'
 ---
 
 <html lang="en">
@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="assets/css/style.css" />
 	</head>
 	<body style="min-width: 350px">
+                <Header/>
 		<slot/>
         <script is:inline src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 

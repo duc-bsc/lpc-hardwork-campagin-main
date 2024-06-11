@@ -1,0 +1,63 @@
+---
+import imgMan from './man.png';
+import { Picture } from 'astro:assets';
+import bg from './bg.png';
+---
+
+<section class="position-relative mt-neg11vw" id="plantStrong-section">
+	<Picture src={bg} formats={['avif', 'webp']} alt="images" loading="lazy" widths={[480, 768, 992, 1200, 1500]} class="plantStrong-bg" sizes={` (max-width: 480px) 480px,(max-width: 768px) 768px, (max-width: 992px) 992px,(max-width: 1200px) 1200px, 1500px`} />
+	<div class="bottom-0 right-0 w-50vw position-absolute position-xs-relative mt-neg8vw d-sm-none order-xs-1">
+		<Picture src={imgMan} formats={['avif', 'webp']} alt="images" loading="lazy" widths={[100, 400, 800]} class="h-auto d-block w-100" sizes={` (max-width: 768px) 100px, (max-width: 992px) 400px, 800px`} />
+	</div>
+	<section class="inset-0 position-md-absolute position-sm-relative gradient-background" id="plantStrong-text">
+		<article class="container section-block">
+			<p class="mb-0">
+				<strong>Plant&nbsp;<br />Strong.</strong>&nbsp;
+			</p>
+			<p class="mb-05 drop-shadow">For more than 35 years, we've manufactured ag products that keep you and your equipment working efficiently season after season. From our gentle Poly Cupped Flighting™ to our FreeFlo™ seed tender products, our easily integrated equipment upgrades will be sure to give this planting season a boost.</p>
+			<span></span>
+			<p class="m-0">
+				<a class="button modal-open" data-modal="modal-1">INCREASE PLANTING EFFICIENCY <i class="fas fa-chevron-circle-right"></i></a>
+			</p>
+		</article>
+	</section>
+</section>
+<style>
+	#plantStrong-section {
+		position: relative;
+		min-height: calc(100vw / 1920 * 918);
+		background: linear-gradient(to bottom, transparent, black);
+	}
+	#plantStrong-text {
+		padding-right: 37vw;
+		padding-left: 25vw;
+	}
+
+	@media screen and (max-width: 1600px) {
+		#plantStrong-text {
+			padding-right: 37vw;
+			padding-left: 2vw;
+		}
+	}
+	.plantStrong-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	@media screen and (max-width: 768px) {
+		#plantStrong-section {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	@media screen and (max-width: 599.98px) {
+		#plantStrong-text {
+			padding: 0;
+		}
+	}
+</style>
