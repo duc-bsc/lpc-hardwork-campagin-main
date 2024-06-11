@@ -192,17 +192,7 @@ footer article p strong {
   padding-right: 25vw;
 }
 
-@screen and (min-width: 769px) {
-  #harvestsmart-man {
-    left: 3vw;
-    max-width: 40vw;
-  }
-}
 
-#harvestsmart-text {
-  padding-left: 30vw;
-  padding-top: 8vw;
-}
 
 section.position-relative > img {
   width: 100%;
@@ -624,11 +614,7 @@ footer {
 
 
 
-#harvestsmart-section {
-  /* min-width: 100vw; */
-  min-height: calc(100vw / 1920 * 923);
-  background: linear-gradient(to bottom, transparent, black), url("/images/harvestsmart-bg.png") top right / auto 100%;
-}
+
 
 #standards-redefined-section {
   /* min-width: 100vw; */
@@ -719,9 +705,7 @@ footer {
     position: absolute;
   }
 
-  #harvestsmart-text {
-    padding-left: 45vw;
-  }
+  
 }
 
 /*sx<=567px,sm <= 768px,md <= 992px,lg <= 1200px,xl <= 1600px*/
@@ -736,9 +720,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  #harvestsmart-text {
-    padding-left: 0;
-  }
+ 
 
   .footer .row-products {
     /* flex-direction: column; */
@@ -760,8 +742,6 @@ footer {
     width: 100vw;
   }
 
-  #plantstrong-section,
-  #harvestsmart-section,
   #standards-redefined-section {
     display: flex;
     flex-direction: column;
@@ -777,15 +757,6 @@ footer {
 }
 
 @media screen and (max-width: 599.98px) {
-  #harvestsmart-text {
-    padding-left: 0;
-    padding-top: 0;
-  }
-
-  #harvestsmart-man {
-    left: auto;
-    right: 0;
-  }
 
   .article p:nth-child(2) {
     width: 90vw !important;
