@@ -1,0 +1,101 @@
+---
+import { Image } from 'astro:assets';
+import img1 from './Wearshoes.png';
+import img2 from './PolyCuppedFlighting.png';
+import img3 from './product-1.jpg';
+---
+
+<div class="row scollbar">
+	<!-- text -->
+	<div class="col-left">
+		<article class="" style="">
+			<p class="mb-05"><strong>YOU EXPECT YOUR EQUIPMENT TO WORK HARD.&nbsp;</strong><strong>WE DO TO.</strong></p>
+			<a class="button" href="https://www.lundellplastics.com/" target="_blank">
+				GET OUR FEATURED UPGRADES
+				<i class="fas fa-chevron-circle-right"></i>
+			</a>
+		</article>
+	</div>
+	<!-- products -->
+	<div class="col-right">
+		<div class="row-products">
+			{
+				[
+					{
+						imgProduct: img1,
+						logo: 'https://www.lundellplastics.com/images/Logo-UHMW-Wearshoes.svg',
+						content: 'UHMW Wearshoes™ can fit onto new or worn steel auger flighting, thus extending the life of any auger.',
+					},
+					{
+						imgProduct: img2,
+						logo: 'https://www.lundellplastics.com/images/Logo-Poly-Cupped-Flighting.svg',
+						content: 'PolyCupped™ Flighting delivers more intact seed through gentle seed handling.',
+					},
+					{
+						imgProduct: img3,
+						logo: 'https://www.lundellplastics.com/images/Logo-ExoPlate.svg',
+						content: 'ExoPlate™ liners extend the life of your machinery and protect from potential loss of grain, saving you time and money.',
+					},
+				].map(({ imgProduct, logo, content }) => (
+					<div class="col max-width-product">
+						<div class="max-width-product__img1">
+							<Image src={imgProduct} alt="images" />
+						</div>
+						<div class="max-width-product__footer">
+							<Image format="svg" style="max-height: 60px" class="my-3" src={logo} width={246} height={77} alt="images" />
+							<p>{content}</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</div>
+<style>
+	.row-products {
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.row-products .col {
+		text-align: center;
+		padding: 1rem;
+	}
+	.max-width-product {
+		min-width: 233px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 10px;
+	}
+	.max-width-product__img1 {
+		text-align: center;
+		height: 100%;
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: center;
+		align-items: flex-end;
+	}
+	.max-width-product__img1 img {
+		display: inline-block;
+		max-width: 100px;
+	}
+
+	.max-width-product img {
+		display: inline-block;
+	}
+	@media screen and (max-width: 1100px) {
+		.max-width-product {
+			flex: 1;
+		}
+
+		.max-width-product > img:first-child {
+			max-width: 60px;
+		}
+
+		.max-width-product > img:nth-child(2) {
+			max-width: 150px;
+		}
+	}
+</style>
