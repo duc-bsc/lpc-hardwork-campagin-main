@@ -1,26 +1,27 @@
 ---
-import Header from '../components/Header/index.astro'
-import Footer from '../components/Footer/index.astro'
+import Header from '../components/Header/index.astro';
+import Footer from '../components/Footer/index.astro';
+import '../assets/css/flickity.css';
+import '../assets/css/style.css';
+import favicon from './favicon.ico'
 ---
 
 <html lang="en">
 	<head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Hard Work. Made Simple. | Lundell Plastics</title>
-    
-        <link rel="stylesheet" href="assets/css/flickity.css" />
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <link rel="stylesheet" href="assets/css/style.css" />
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hard Work. Made Simple. | Lundell Plastics</title>
+
+		<link rel="shortcut icon" href={favicon} />
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 	</head>
 	<body style="min-width: 350px">
-                <Header/>
-		<slot/>
-                <Footer/>
-        <script is:inline src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+		<Header />
+		<slot />
+		<Footer />
+		<script is:inline src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-        <script is:inline type="module" src="assets/js/mainNo.js"></script>
+		<script is:inline type="module" src="assets/js/mainNo.js"></script>
 	</body>
 </html>
