@@ -100,6 +100,15 @@ const modals = {
       productTitle: "The Closer",
       desc: 'The Closer closing wheels ensures adequate seed-to-soil contact while eliminating side wall compaction. Curved tooth design prevent lifting of the seed. Works in a wide variety of soil types and tillage practices. Non-stick poly design works great for in-between" nitrogen applications. Great for no-till and full tillage corn emergence.\nExcellent for notilling soybeans in to corn stalks soybeans emerge much quicker.',
     },
+    {
+      logoAlt: "Crimping Gauge Wheel",
+      logoCaption: "Crimping Gauge Wheel",
+      // logoSrc: 'Crimping Gauge Wheel',
+      imgSrc: "https://www.lundellplastics.com/images/Crimping%20Gage%20Wheel-clip.png",
+      productPageUrl: "https://www.lundellplastics.com/planting-products/crimping-gauge-wheels.asp",
+      productTitle: "Crimping Gauge Wheel",
+      desc: `The patented crimping gauge wheels provide an excellent crimp, effectively killing off the cover crop without the need for herbicides. Unlike pull-type crimpers, these wheels follow the ground's contour to get nearly a 100% kill even on uneven terrain.`,
+    },
   ],
   "modal-2": [
     {
