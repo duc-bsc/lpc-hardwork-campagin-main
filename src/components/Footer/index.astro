@@ -1,8 +1,28 @@
 ---
 import FooterProduct from './FooterProduct/index.astro'
 import FooterMain from './FooterMain/index.astro'
+import bg from './footer-bg.jpg'
+import { Picture } from 'astro:assets';
+
 ---
 <footer class="position-relative footer">
+	<Picture src={bg} formats={['avif', 'webp']} alt="images" loading="lazy" widths={[480, 768, 992, 1200, 1500]} class="footer-bg" sizes={` (max-width: 480px) 480px,(max-width: 768px) 768px, (max-width: 992px) 992px,(max-width: 1200px) 1200px, 1500px`} />
     <FooterProduct/>
-   <FooterMain/>
+    <FooterMain/>
 </footer>
+<style>
+    .footer {
+       position: relative;
+    }
+    .footer-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+    }
+  
+</style>
